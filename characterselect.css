@@ -1,0 +1,85 @@
+html , body 
+{ 
+    background-image: url(background/spacebackground.jpg);
+    background-size:100%;
+    margin: 0;
+    height: 100vh;
+    overflow-y: hidden;
+}
+.title, .title img
+{  
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+  height: 12vh;
+}
+
+.carousel {
+  height: 66vh;
+  position: relative;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.carousel:hover{
+  cursor: pointer;
+}
+
+.carousel-item img{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.carousel-item:nth-child(1),
+.carousel-item:nth-child(3),
+.carousel-item:nth-child(4), 
+.carousel-item:nth-child(5),
+.carousel-item:nth-child(6),
+.carousel-item:nth-child(7),
+.carousel-item:nth-child(9), 
+.carousel-item:nth-child(10), 
+.carousel-item:nth-child(11),
+.carousel-item:nth-child(12){
+  height: 50vh;
+}
+.carousel-item:nth-child(2){
+    height: 50vh;
+    width: 20vw;
+}
+.carousel-item:nth-child(8){
+  height: 50vh;
+  width: 15vw;
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 824px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .carousel-item:nth-child(1),
+    .carousel-item:nth-child(3),
+    .carousel-item:nth-child(4), 
+    .carousel-item:nth-child(5),
+    .carousel-item:nth-child(6),
+    .carousel-item:nth-child(7),
+    .carousel-item:nth-child(9), 
+    .carousel-item:nth-child(10), 
+    .carousel-item:nth-child(11),
+    .carousel-item:nth-child(12){
+      height: 60vh;
+      width: 15vw;
+}
+
+    .carousel-item:nth-child(2){
+      height: 60vh;
+      width: 20vw;
+    }
+  }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Heroes</title>
+    <link rel="stylesheet" href="stylegame.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.5/jquery.min.js"></script>
+    <script src="fightpage.js"></script>
+
+</head>
+
+<body>
+    <audio controls loop id="mainsong" src="sounds/spiderman.mp5" type="audio/mpeg" style="display:none"></audio>
+    <audio id="fight!" src="sounds/fight.mp5" type="audio/mpeg"></audio>
+    <audio id="punch" src="sounds/spiderweb.mp5" type="audio/mpeg"></audio>
+    <img class="fight fadeOut" src="background/fight.png">
+    <main>
+        <div class="RPG">
+            <!-- Hero -->
+            <div class="Hero">
+                <img class="heroImg" src="sprites/spiderman.gif">
+                <img class="heroIcon" src="icons/spiderman.png">    
+                <div class="heroStats">
+                    <h4 class="heroName">Spiderman</h4>
+                    <h4 class="heroLevel">Level 1</h4>
+                    <div class="heroHealthBox"></div>
+                    <div class="heroHealthBar"></div>
+                    <div class="heroAPBox"></div>
+                    <div class="heroApBar"></div>
+                </div>
+            </div>
+            <!-- Enemy -->
+            <div class="Enemy">
+                <div class="enemyStats">
+                    <h4 class="enemyName">Venom</h4>
+                    <h4 class="enemyLevel">Level 1</h4>
+                    <div class="enemyHealthBox"></div>
+                    <div class="enemyHealthBar"></div>
+                    <div class="enemyAPBox"></div>
+                    <div class="enemyApBar"></div>
+                </div>
+                <img class="enemyImg" src="sprites/Venom.gif">
+                <img class="enemyIcon" src="icons/venom.png">    
+            </div>
+        </div>
+        <!-- Actions -->
+        <div class="textAndActions">
+            <textarea id="consolebox1" style="resize:none; align-items: left;" readonly></textarea>
+            <div class="commandsContainer">
+                <div class="commands">
+                    <input type="checkbox" id="toggle1" class="visually-hidden">
+                    <div id="show-more-attack" class="fightCommand">
+                        <label for="toggle1" id="attack-button" >
+                            <img src="text/attacktext.png" alt="">
+                            <img src="icons/Abilities.png" alt="">
+                        </label>
+                        
+                        
+                    </div>
+                    <div id="show-more-attack-pt2">
+                        <div class="ability1">
+                            <h4>Punch</h4>
+                            <div class="ability1Stats">
+                                <p>Normal</p>
+                                <p>AP 35/35</p>
+                            </div>
+                        </div>    
+                        
+                        <div class="ability2">
+                            <h4>Web Shooter</h4>
+                            <div class="ability2Stats">
+                                <p>Agility</p>
+                                <p>AP 25/25</p>
+                            </div>
+                        </div> 
+
+                        <div class="ability3">
+                            <h4>Web Grenade</h4>
+                            <div class="ability3Stats">
+                                <p>Magic</p>
+                                <p>AP 15/15</p>
+                            </div>
+                        </div> 
+
+                    <div class="heroSelectContainer">
+                        <label for="" id="attack-button" >
+                            <img src="text/Hero.png" alt="Hero">
+                            <img class="heroSelect" onclick="window.location.href='characterselect.html'" src="icons/hero.png">
+                        </label>    
+                    </div>
+                    <div class="bag">
+                        <label for="" id="attack-button" >
+                            <img src="text/itemstext.png" alt="">
+                            <img src="icons/backpack2.png" alt="">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </main>
+        <script></script>
+</body>
+
+</html>

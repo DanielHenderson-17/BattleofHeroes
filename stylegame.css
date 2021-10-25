@@ -1,0 +1,661 @@
+@import "normalize.css";
+
+html , body 
+{ 
+    background-image: url(background/spacebackground.jpg);
+    background-size:100%;
+    margin: 0;
+    height: 100vh;
+    background-position-y: 00px;
+}
+.main{
+    height: 100vh;
+    overflow-y: hidden;
+}
+button{
+    border: none;
+}
+@keyframes border-pulsate {
+    0%   { border-color: rgb(99, 12, 1); }
+    50%  { border-color: rgba(144, 25, 4, 0.877); }
+    100% { border-color: rgb(99, 12, 1); }
+}
+@keyframes border-pulsate2 {
+    0%   { background-color: #007f00; }
+    50%  { background-color: rgba(2, 155, 40, 0.877); }
+    100% { background-color: #007f00; }
+}
+@keyframes border-pulsate3 {
+    0%   { background-color: #104b97; }
+    50%  { background-color: #1460c2; }
+    100% { background-color: #104b97; }
+}
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+.fight
+{
+    position: absolute;
+    -webkit-animation-duration: 2s;animation-duration: 2s;
+    -webkit-animation-fill-mode: both;animation-fill-mode: both;
+    z-index: 1;
+    height: 400px;
+    width: 700px;
+    bottom: 50%;
+    left: 35%;
+    margin: 0 auto;
+}
+
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+ }
+
+.RPG 
+{ 
+    display: flex;
+    width: 90vw;
+    height: 70vh;
+    margin: 0 auto;
+}
+
+
+
+/* Hero*/
+.Hero
+{   
+    margin-top: 20px;
+    width: 45vw;
+    border-radius: 20px;
+    border:1px solid black;
+    background-image: url(background/movingbackground1.gif);
+    background-size:  200% 100%;
+    background-position-y: 0px;
+}
+.heroImg
+{
+    display: flex;
+    margin: 20% auto 0 auto;
+    justify-content: center;
+    width: 15vw;
+    height: 15vw;
+    z-index: 10;
+}
+.heroIcon
+{
+    display: flex;
+    position: absolute;
+    margin: 2px auto 0 auto;
+    justify-content: center;
+    bottom: 32.2%;
+    left: 5.3%;
+    width: 6%;
+    height: 9%;
+    z-index: 10;
+}
+.heroStats
+{
+    border-radius: 10px;
+    box-shadow: 3px 3px rgba(10, 10, 10, 0.521);
+    padding: 2px 50px 10px 60px;
+    width: 10vw;
+    height: 40px;
+    transform: skew(-20deg);
+    background: rgb(253, 253, 253, 0.6) ;
+    margin: 9.5% 0 0 5%;
+    text-align: center;  
+}
+.heroName{
+    display: inline;
+    margin-right: 30%;
+}
+.heroLevel{
+    display: inline;
+    margin: 5px 0 0 auto;
+    justify-content: right;
+    text-align: right;
+}
+.heroHealthBox 
+{
+    background-color: #ccc;
+    border-radius: 24px;
+    height: 10px;
+    width: 10vw;
+    position: relative;
+    margin: 0 auto ;
+    bottom: 0px;
+    right: 0%;
+    transform: skew(-20deg);
+    border: solid 1px #aaa;
+}
+.heroHealthBar 
+{
+    background-color: #007f00;
+    border-radius: 24px;
+    width: inherit;
+    height: 8px;
+    position: relative;
+    bottom: 11px;
+    right: 0%;
+    transform: skew(-20deg);
+    border: solid 1px;
+    animation: border-pulsate2 2s infinite;
+}
+.heroAPBox{
+    background-color: #ccc;
+    border-radius: 24px;
+    height: 5px;
+    width: 5vw;
+    position: relative;
+    margin: 0 auto ;
+    bottom: 20%;
+    right: 21%;
+    transform: skew(-20deg);
+    border: solid 1px black;
+      
+}
+.heroApBar{
+    background: #0d4286;
+    border-radius: 24px;
+    width: 5vw;
+    height: 5px;
+    position: relative;
+    bottom: 14px;
+    right: -4%;
+    transform: skew(-20deg);
+    animation: border-pulsate3 2s infinite;
+}
+
+/* Enemy*/
+.Enemy
+{   
+    margin-top: 20px;
+    margin-left: 40px;
+    width: 45vw;
+    border-radius: 20px;
+    border:1px solid black;
+    background-image: url(background/movingbackground1.gif);
+    background-size:  200% 100%;
+    background-position-y: 0px;
+    background-position-x: -740px;
+    
+}
+.enemyIcon
+{
+    display: flex;
+    position: absolute;
+    margin: 2px auto 0 auto;
+    justify-content: center;
+    top: 4.2%;
+    right: 5.5%;
+    width: 6%;
+    height: 9%;
+    z-index: 10;
+}
+.enemyStats
+{
+    border-radius: 10px;
+    box-shadow: 3px 3px rgba(10, 10, 10, 0.521);
+    padding: 2px 50px 10px 60px;
+    position: absolute;
+    width: 10%;
+    height: 4.2%;
+    top: -2%;
+    right: 1%;
+    transform: skew(-20deg);
+    background: rgb(253, 253, 253, 0.6) ;
+    margin: 3.5% 7% 0 auto;
+}
+.enemyName{
+    display: inline;
+    margin-right: 35%;
+}
+.enemyLevel{
+    display: inline;
+    margin: 5px 0px 0 auto;
+    justify-content: right;
+    text-align: right;
+}
+.enemyHealthBox
+{
+    background-color: #ccc;
+    border-radius: 24px;
+    height: 10px;
+    width: 10vw;
+    position: relative;
+    margin: 0 auto ;
+    bottom: 0%;
+    right: 0%;
+    transform: skew(-20deg);
+    border: solid 1px #aaa;
+    box-shadow: 2px 2px black;  
+}
+.enemyHealthBar 
+{
+    float: right;
+    background-color: #007f00;
+    border-radius: 24px;
+    width: 10vw;
+    height: 10px;
+    position: relative;
+    bottom: 11px;
+    right: 0%;
+    transform: skew(-20deg);
+    border: solid 1px;
+    animation: border-pulsate2 2s infinite;
+}
+.enemyAPBox{
+    background-color: #ccc;
+    border-radius: 24px;
+    height: 5px;
+    width: 5vw;
+    position: relative;
+    margin: 0 auto ;
+    bottom: -10%;
+    left: 25%;
+    transform: skew(-20deg);
+    border: solid 1px black;
+      
+}
+.enemyApBar{
+    clear: right;
+    background: #0d4286;
+    border-radius: 24px;
+    width: 5vw;
+    height: 5px;
+    position: relative;
+    bottom: 17%;
+    left: 50%;
+    transform: skew(-20deg);
+    animation: border-pulsate3 2s infinite;
+}
+.enemy-health-bar-text 
+{
+    position: relative;
+    bottom: 80px;
+}
+.enemyImg{
+    display: flex;
+    margin: 0% auto 0 auto;
+    justify-content: center;
+    width: 21vw;
+    height: 50vh;
+    z-index: 10;
+    transform: scaleX(-1);
+}
+.message-box 
+{
+    text-align: left;
+    padding: 5px;
+}
+
+/* Text & Actions */
+.textAndActions{ 
+    display: flex;
+    width: 90vw;
+    height: 22vh;
+    margin: 0 auto;
+}
+
+/* Console */
+#consolebox1
+{
+    width: 70vw;
+    margin-top: 20px;
+    font-size: 20px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border:2px solid #741104;
+    border-radius: 15px;
+    background: rgb(253, 253, 253, 0.6) ;
+    color: blanchedalmond;
+    overflow-y: hidden;
+}
+
+/* Commands */
+.commandsContainer{
+    width: 20vw;
+    margin-top: 20px;
+    margin-left: 0px;
+    font-size: 20px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    /* border:2px solid #741104; */
+    border-radius: 15px;
+    background: transparent ;
+}
+
+#show-more-attack{
+    position: absolute;
+    right: 5%;
+    bottom: 21%;
+    margin: 0 0 0 auto;
+    width: 50%;
+}
+label{
+    float: right;
+    padding: 0px 0px 0px 5px; 
+    display: flex;
+    margin: 10px auto 10px auto;
+    height: 5vh;
+    width: 10vw;
+    background: rgb(253, 253, 253, .0);
+    border-radius: 40px 40px 40px 4px;
+    z-index: 14;
+}
+
+label:nth-child(1){
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+label:nth-child(2){
+    margin-top: 0px;
+}
+
+#show-more-attack {
+    border-radius:4px 40px 40px 40px;
+    float:right;
+    padding-left: 5px;
+    width: 10vw;
+    height: 5vh;
+    transition: width .5s;
+    transition-delay: 1s;
+    margin-bottom: 18px;
+    background: rgb(253, 253, 253, .7);
+    border-radius: 4px 40px 40px 4px;
+    box-shadow: 3px 0px rgba(10, 10, 10, 1);
+    z-index: 12;
+}
+#show-more-attack-pt2 {
+    display: block;
+    float: right;
+    border-radius:0px 0px 40px 4px;
+    width: 8.8vw;
+    margin: 12.5% 52.5% 0 0;
+    height: 0;
+    background: rgb(253, 253, 253, .7);
+    transition: height 1s;
+    transition-delay: 0s;
+    overflow-y: hidden;
+    z-index: -10;
+}
+   
+    #attack-button {
+
+    }
+    
+    .visually-hidden {
+        position: absolute;
+        left: -100vw;
+    }
+    
+    #toggle1:checked ~ #show-more-attack {
+        transition-delay: 0s;
+        width: 19vw;
+        border-radius: 20px 40px 40px 4px;
+    }
+    #toggle1:checked ~#show-more-attack-pt2 {
+        transition-delay: .5s;
+        height: 14.5vh;
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    .ability1, .ability2, .ability3{
+        height: 32%;
+        outline: 1px solid #210f21;
+        padding: 1px 5px;
+    }
+    .ability1 h4,
+    .ability2 h4,
+    .ability3 h4{
+        font-family: sans-serif;
+        font-weight: normal;
+        vertical-align: center;
+        text-align: left;
+        margin: 0px;
+        width: 100%;
+    }
+    .ability1Stats, .ability2Stats, .ability3Stats{
+        display: flex;
+        margin: 0 auto;
+    }
+    .ability1Stats p:first-child,
+    .ability2Stats p:first-child,
+    .ability3Stats p:first-child{
+        display: inline;
+        margin: 0;
+        font-size: 12px;
+        padding: 0 2px;
+        border-radius: 40px;
+        border: 1px solid black;
+    }
+    .ability1Stats p:nth-child(2),
+    .ability2Stats p:nth-child(2),
+    .ability3Stats p:nth-child(2)
+    {
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        color: white;
+        display: inline;
+        margin: 0;
+        font-size: 12px;
+        padding: 0 2px;
+    }
+    .ability1Stats p:first-child{
+        background-color: rgb(158, 154, 154);
+        color: white;
+    }
+    .ability2Stats p:first-child{
+        background-color: rgb(168, 170, 19);
+        color: white;
+    }
+    .ability3Stats p:first-child{
+        color: white;
+        background-color: rgb(88, 124, 245);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fight Command */
+label img:nth-child(1){
+    width: 50%;
+    height: 60%;
+    margin-top: 10px;
+    margin-right: 45px;
+}
+label:hover{
+    cursor: pointer;
+}
+.fightCommand img:nth-child(2){
+    width: 25%;
+    height: 110%;
+}
+.popup{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}
+.attack{
+    display: block;
+    width: 35%;
+    height: 30%;  
+}
+.attack:hover{
+    cursor: pointer;   
+    transform: translateY(2px);
+}
+.attack:active {
+    transform: translateY(4px);
+}
+
+/* HeroSelect */
+.heroSelectContainer{
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+}
+.heroSelectContainer img:nth-child(1){
+    width: 50%;
+    height: 55%;
+    margin-top: 10px;
+    margin-right: 0px;
+}
+.heroSelect{
+    margin-top: 0px;
+    margin-left: 30%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 3vw;
+    height: 5vh;  
+}
+.heroSelect:hover{
+    cursor: pointer;
+    transform: translateY(2px);
+    animation: border-pulsate 3s infinite;
+}
+.heroSelect:active {
+    transform: translateY(4px);
+}
+
+/* Bag */
+.bag{
+    position: absolute;
+    bottom: 9%;
+    right: 5%;
+}
+.bag img:nth-child(1){
+    width: 50%;
+    height: 55%;
+    margin-top: 10px;
+    margin-right: 0px;
+}
+.bag img:nth-child(2){
+    margin-top: 0px;
+    margin-left: 30%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 3vw;
+    height: 5vh; 
+}
+
+
+/* width */
+::-webkit-scrollbar 
+{
+    width: 20px;
+} 
+  /* Track */
+  ::-webkit-scrollbar-track 
+{
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 24px;
+}
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb 
+{
+    background: #c7c4c4; 
+    border-radius: 10px;
+}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover 
+{
+    background: #8a8888; 
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 824px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    #consolebox1{
+        height: 17vh;
+        width: 43vw;
+        margin: 15px auto 0 40px;
+        font-size: 18px;
+    }
+    .Attackgrid
+    { 
+        position: absolute;
+        bottom: 8%;
+        left: 70%;
+        width: 30%;
+        height: 11%;
+    }
+    .attack
+    {
+        width: 10vw;
+        height: 15vh;  
+    }
+    .heroStats
+    {
+    position: absolute;
+    bottom: 12%;
+    left: 3.5%;
+    border-radius: 10px;
+    border:2px solid #741104;
+    /* padding: 2px 50px 10px 60px; */
+    width: 7vw;
+    height: 10px;
+    transform: skew(-20deg);
+    background: #fdfdfd;
+    margin: 10% 0 10% 5%;
+    text-align: center;  
+    }
+    .hero-health-box 
+    {
+    background-color: #ccc;
+    border-radius: 24px;
+    height: 3px;
+    width: 15vw;
+    position: relative;
+    margin: 0 auto ;
+    bottom: -40%;
+    right: 85%;
+    border: solid 1px #aaa;
+    box-shadow: 2px 2px black;  
+    }
+    .hero-health-bar 
+    {
+    background-color: #007f00;
+    border-radius: 24px;
+    width: 15vw;
+    height: 3px;
+    position: relative;
+    bottom: 20%;
+    right: 85%;
+    border: solid 2px;
+    animation: border-pulsate2 2s infinite;
+    }
+}
+
