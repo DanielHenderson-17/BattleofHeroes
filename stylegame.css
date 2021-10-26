@@ -52,6 +52,36 @@ button{
     animation-name: fadeOut;
  }
 
+.info{
+    display: flex;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    margin: 15 auto 0 15px;
+    border-radius: 15px;
+    background: rgb(253, 253, 253, 0.6) ;
+}
+.info h3{
+    margin: auto;
+    vertical-align: center;
+}
+ .info img{
+    margin-left: 10px;
+    border-radius: 50%;
+    width: 20px;
+ }
+.info:hover{
+    cursor: pointer;
+}
+.info:active{
+    transform: translateY(2px);
+}
+
+
+
+
+
+
 .RPG 
 { 
     display: flex;
@@ -365,7 +395,7 @@ label:nth-child(2){
     transition-delay: 1s;
     margin-bottom: 18px;
     background: rgb(253, 253, 253, .7);
-    border-radius: 4px 40px 40px 4px;
+    border-radius: 20px 40px 40px 4px;
     box-shadow: 3px 0px rgba(10, 10, 10, 1);
     z-index: 12;
 }
@@ -407,6 +437,11 @@ label:nth-child(2){
         height: 32%;
         outline: 1px solid #210f21;
         padding: 1px 5px;
+    }
+    .ability1:hover,
+    .ability2:hover,
+    .ability3:hover{
+        cursor: pointer;
     }
     .ability1 h4,
     .ability2 h4,
